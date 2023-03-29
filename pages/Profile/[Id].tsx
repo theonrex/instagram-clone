@@ -264,17 +264,16 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: Params }) {
   const user = profileData.userData.find(
-    (user) => user.id.toString() === params.id.toString()
+    (user) => user.id.toString() === params?.id?.toString()
   );
 
   const userPost = profilePostData.profilePostData.find(
-    (user) => user.id.toString() === params.id.toString()
+    (user) => user.id.toString() === params?.id?.toString()
   );
 
   if (!user || !userPost) {
     return {
       notFound: true,
-      // or add a custom 404 page by replacing `notFound: true` with:
       redirect: {
         destination: "/",
         permanent: false,
@@ -284,5 +283,6 @@ export async function getStaticProps({ params }: { params: Params }) {
 
   return { props: { user, userPost } };
 }
+
 
 //profilePostData
