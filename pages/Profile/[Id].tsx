@@ -249,11 +249,11 @@ export default function profileId({ user, userPost }: Props) {
 
 export async function getStaticPaths() {
   const userDataPaths = profileData?.userData.map((user) => ({
-    params: { Id: user.id.toString() },
+    params: { Id: user.id?.toString() },
   }));
 
   const postPaths = profilePostData?.profilePostData.map((post) => ({
-    params: { Id: post.id.toString() },
+    params: { Id: post.id?.toString() },
   }));
 
   const paths = [...userDataPaths, ...postPaths];
@@ -263,11 +263,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: Params }) {
   const user = profileData.userData.find(
-    (user) => user.id.toString() === params.id.toString()
+    (user) => user.id?.toString() === params.id?.toString()
   );
 
   const userPost = profilePostData.profilePostData.find(
-    (user) => user.id.toString() === params.id.toString()
+    (user) => user.id?.toString() === params.id?.toString()
   );
 
   if (!user || !userPost) {
@@ -278,4 +278,6 @@ export async function getStaticProps({ params }: { params: Params }) {
 
   return { props: { user, userPost } };
 }
+
+
 
