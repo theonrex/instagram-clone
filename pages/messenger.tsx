@@ -1,7 +1,9 @@
-import React from 'react'
-import Message from '@/components/Messanger/Message'
+import React from "react";
+import Message from "@/components/Messenger/Message";
 export default function Messenger() {
   return (
-    <div><Message/></div>
-  )
+    <div>
+      <Message />
+    </div>
+  );
 }

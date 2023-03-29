@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function Suggestions() {
   return (
     <div>
-      <header className="flex justify-between text-gray-500 font-semibold pb-4">
+      <header className="flex justify-between text-gray-500 font-semibold pb-4 ">
         Suggestions For You <span className="text-gray-800">See All</span>
       </header>{" "}
       <ul className="space-y-2 font-medium">
-        {SuggestionsData.userData.map((suggestedData) => (
-          <li>
+        {SuggestionsData.userData.map((suggestedData, index) => (
+          <li key={index}>
             <a
               href="#"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"

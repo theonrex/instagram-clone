@@ -19,6 +19,9 @@ body::-webkit-scrollbar {
     background-color: red !important;
 
 }
+nav{
+    margin-bottom: 5em !important;
+}
 
 main{
     display: block;

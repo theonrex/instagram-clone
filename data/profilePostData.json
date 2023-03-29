@@ -1,0 +1,233 @@
+{
+  "profilePostData": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "profilePicUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post%20(1).png",
+      "posts": [
+        {
+          "id": 1,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My fircst post",
+          "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My second post",
+          "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My third post",
+          "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/multiplepostpictures.png"
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+
+          "caption": "My fourth post"        },
+        {
+          "id": 5,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post%20(3).png",
+
+          "caption": "My fifth post"
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post%20(3).png",
+
+          "caption": "My sixth post"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "johndoe",
+      "profilePicUrl": "https://example.com/profilepic.jpg",
+      "posts": [
+        {
+          "id": 1,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My first post",
+          "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://example.com/post2.jpg",
+          "caption": "My second post",
+          "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://example.com/post3.jpg",
+          "caption": "My third post"
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://example.com/post4.jpg",
+          "caption": "My fourth post"
+        },
+        {
+          "id": 5,
+          "imageUrl": "https://example.com/post5.jpg",
+          "caption": "My fifth post"
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://example.com/post6.jpg",
+          "caption": "My sixth post"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "johndoe",
+      "profilePicUrl": "https://example.com/profilepic.jpg",
+      "posts": [
+        {
+          "id": 1,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My first post"
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://example.com/post2.jpg",
+          "caption": "My second post"
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://example.com/post3.jpg",
+          "caption": "My third post"
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://example.com/post4.jpg",
+          "caption": "My fourth post"
+        },
+        {
+          "id": 5,
+          "imageUrl": "https://example.com/post5.jpg",
+          "caption": "My fifth post"
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://example.com/post6.jpg",
+          "caption": "My sixth post"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "username": "johndoe",
+      "profilePicUrl": "https://example.com/profilepic.jpg",
+      "posts": [
+        {
+          "id": 1,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My first post"
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://example.com/post2.jpg",
+          "caption": "My second post"
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://example.com/post3.jpg",
+          "caption": "My third post"
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://example.com/post4.jpg",
+          "caption": "My fourth post"
+        },
+        {
+          "id": 5,
+          "imageUrl": "https://example.com/post5.jpg",
+          "caption": "My fifth post"
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://example.com/post6.jpg",
+          "caption": "My sixth post"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "username": "johndoe",
+      "profilePicUrl": "https://example.com/profilepic.jpg",
+      "posts": [
+        {
+          "id": 1,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My first post"
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://example.com/post2.jpg",
+          "caption": "My second post"
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://example.com/post3.jpg",
+          "caption": "My third post"
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://example.com/post4.jpg",
+          "caption": "My fourth post"
+        },
+        {
+          "id": 5,
+          "imageUrl": "https://example.com/post5.jpg",
+          "caption": "My fifth post"
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://example.com/post6.jpg",
+          "caption": "My sixth post"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "username": "johndoe",
+      "profilePicUrl": "https://example.com/profilepic.jpg",
+      "posts": [
+        {
+          "id": 1,
+          "imageUrl": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
+          "caption": "My first post"
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://example.com/post2.jpg",
+          "caption": "My second post"
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://example.com/post3.jpg",
+          "caption": "My third post"
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://example.com/post4.jpg",
+          "caption": "My fourth post"
+        },
+        {
+          "id": 5,
+          "imageUrl": "https://example.com/post5.jpg",
+          "caption": "My fifth post"
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://example.com/post6.jpg",
+          "caption": "My sixth post"
+        }
+      ]
+    }
+  ]
+}

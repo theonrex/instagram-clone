@@ -1,13 +1,12 @@
 {
-  "userData": [
+  "storyrData": [
     {
       "id": 1,
-      "name": " terrylucas",
+      "name": " your story",
       "url": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post.png",
       "followed": "followed by lanelammy + 3 more",
       "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png",
       "likes": 10000,
-      "message": "Active 1 hour ago",
       "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
     },
     {
@@ -17,7 +16,6 @@
       "followed": "followed by terylucas + 2 more",
       "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png",
       "likes": 13020,
-      "message": "Active 3 days ago",
       "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
     },
     {
@@ -27,7 +25,6 @@
       "followed": "followed by harrygate + 2 more",
       "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png",
       "likes": 123000,
-      "message": "Active 11 hours ago",
       "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
     },
     {
@@ -37,7 +34,6 @@
       "followed": "followed by terylucas + 2 more",
       "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png",
       "likes": 34334,
-      "message": "Active 15 hours ago",
       "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
     },
     {
@@ -47,7 +43,6 @@
       "followed": "followed by ednamanz + 2 more",
       "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/multiplepostpictures.png",
       "likes": 55100,
-      "message": "Active 11 minutes ago",
       "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
     },
     {
@@ -57,7 +52,6 @@
       "followed": "followed by christinnast + 2 more",
       "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/multiplepostpictures.png",
       "likes": 454000,
-      "message": "Active 11 hours ago",
       "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
     }
   ]
