@@ -249,18 +249,17 @@ export default function profileId({ user, userPost }: Props) {
 
 export async function getStaticPaths() {
   const userDataPaths = profileData?.userData.map((user) => ({
-    params: { Id: user.id.toString() },
+    params: { id: user.id.toString() },
   }));
 
   const postPaths = profilePostData?.profilePostData.map((post) => ({
-    params: { Id: post.id.toString() },
+    params: { id: post.id.toString() },
   }));
 
   const paths = [...userDataPaths, ...postPaths];
 
   return { paths, fallback: false };
 }
-
 
 export async function getStaticProps({ params }: { params: Params }) {
   const user = profileData.userData.find(
