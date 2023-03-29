@@ -40,8 +40,6 @@ interface Params {
 export default function profileId({ user, userPost }: Props) {
   const [posts, setPosts] = useState(userPost.posts);
 
-  console.log(userPost.posts);
-
   if (!user) {
     return <div className="mt-14">User not found</div>;
   }
