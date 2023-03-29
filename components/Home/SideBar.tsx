@@ -2,8 +2,6 @@ import React from "react";
 import ProfileData from "../../data/usersData.json";
 import Image from "next/image";
 import Suggestions from "./Suggestions";
-import Footer from "../Footer/Footer";
-import Status from "./Status";
 import InstagramPost from "./InstagramPost";
 export default function SideBar() {
   const firstImage = ProfileData.userData[0]; // Get the first image from the array

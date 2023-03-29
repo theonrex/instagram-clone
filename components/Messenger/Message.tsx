@@ -38,7 +38,7 @@ export default function Message() {
                       alt={`Image`}
                       width={20}
                       height={20}
-                      className="pt-1"
+                      className="pt-1 "
                     />
                   </span>
                 </aside>
@@ -49,7 +49,7 @@ export default function Message() {
                   alt={`Image`}
                   width={30}
                   height={30}
-                  className=""
+                  className="me"
                 />
               </span>
             </div>

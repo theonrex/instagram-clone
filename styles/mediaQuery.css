@@ -1,111 +1,190 @@
 /* navbar */
 @media screen and (max-width: 1000px) {
 
-    .nav_hide{
+    .nav_hide {
         display: none;
     }
-    
+
 }
 
 
 @media screen and (max-width: 930px) {
-/* sidebar */
-    .side_bar_hide{
+
+    /* sidebar */
+    .side_bar_hide {
         display: none;
     }
+
     /* homepage */
-    .home_body_width{
+    .home_body_width {
         width: 100%;
     }
-    
+
 }
 
 @media screen and (max-width: 907px) {
-/* message  */
-    .chat_box_width{
+
+    /* message  */
+    .chat_box_width {
         width: 40%;
     }
-    .message_body_width  {
+
+    .message_body_width {
         width: 60%
-
     }
-    
+
 }
+
 @media screen and (max-width: 800px) {
-/* navbar */
-    .nav_hide{
+
+    /* navbar */
+    .nav_hide {
         display: none;
     }
- 
-    
+
+
 }
+
 @media screen and (max-width: 599px) {
-/* message  */
-    .chat_box_width{
+
+    /* message  */
+    .chat_box_width {
         display: none;
     }
-    .message_body_width  {
+
+    .message_body_width {
         width: 100%
+    }
+
+    .user_profile_heading {}
+
+    .user_profile_details .user_full_name {
+        order: 1;
+        display: flex;
+        font-size: 1em;
+    }
+
+    .user_profile_details .user_followers {
+        order: 2;
+    }
+
+    .user_profile_details .profileData_settings {
+        order: 3;
 
     }
-    .user_profile_heading{
-        flex-direction: column;
-    }
-    .user_profile_heading img{
-        margin: auto;
-    }
-    .user_profile_details {
-        padding-top: 2em;
-    }
- 
-    
+
 }
 
+@media screen and (max-width: 430px) {
+    .profileData_settings_hide {
+        display: none;
+    }
 
+    .profileData_settings_show {
+        display: flex;
+    }
+}
 
 
 
 @media screen and (max-width: 400px) {
-/* navbar */
-    .home_body_width ,
-    .home_body_width .p-4{
-       padding: 0;
+
+    /* navbar */
+    .home_body_width,
+    .home_body_width .p-4 {
+        padding: 0;
     }
-      .post_icons img{
+
+    .post_icons img {
         width: 70%;
     }
+
     /* user profile */
-    .user_profile_details ,
-    .profileData_settings h1
-    
-    
-    {
-        margin: auto;
+    .user_profile_details {
+        text-align: center;
         flex-direction: column;
 
     }
 
+    .profileData_settings h1 {
+        text-align: center;
+    }
+
+    .user_full_name {
+        display: none;
+    }
+
+    /* scrollbar */
+    .user_hightlight,
+    .user_followers,
+    .profile_tab {
+        display: flex;
+        font-size: 1em;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: scroll;
+        scrollbar-width: none;
+    }
+
+    .user_followers h2 {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .profileData_settings_show h1 {
+        font-size: 0.9em;
+    }
+
+    .Edit_Profile button {
+        font-size: 0.7em;
+        padding: 0.2em 1em;
+    }
 }
 
 @media screen and (max-width: 330px) {
-/* navbar */
-    .post_body_details ,
+
+    /* navbar */
+    .post_body_details,
     .post_body_details span,
-    .post_body_details div{
-       display: block;
-       padding-left:  0;
+    .post_body_details div {
+        display: block;
+        padding-left: 0;
     }
-    
+
+    /* message */
+    .message_icon {
+        width: 18px;
+    }
+
+    /* user image */
+    .user_profile_heading img {
+        width: 60px;
+
+    }
+
+}
+
+/*  */
+@media screen and (max-width: 310px) {
+
+    /*  user_followers   */
+    .user_followers h2 {
+        font-size: 0.6em;
+        padding-right: 0.5em;
+
+    }
+
 }
 
 
-  
 
-/* bottom_nav */
+/* Min width */
 
 @media screen and (min-width: 930px) {
-    .bottom_nav_show{
+    .bottom_nav_show {
         display: none;
     }
-    
+
+
 }

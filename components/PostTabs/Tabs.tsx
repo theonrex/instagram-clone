@@ -6,18 +6,12 @@ import videosIcon from "../../public/assets/icons/Videos.png";
 import taggedIcon from "../../public/assets/icons/tagged.png";
 import Image from "next/image";
 
-interface Props {
-    id: number;
-    imageUrl: string;
-}
-
-
-export default function Tabs({id, imageUrl}: Props ) {
+export default function Tabs() {
   return (
     <div>
-      <div className="mb-4 mt-6 border-b border-gray-200 dark:border-gray-700">
+      <div className="mb-4 mt-6 border-b border-gray-200 dark:border-gray-700 ">
         <ul
-          className="flex flex-wrap -mb-px text-sm font-medium text-center"
+          className="flex -mb-px text-sm font-medium text-center profile_tab"
           id="myTab"
           data-tabs-toggle="#myTabContent"
           role="tablist"

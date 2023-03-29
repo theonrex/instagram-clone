@@ -3,140 +3,143 @@ import profileData from "../../data/usersData.json";
 import profilePostData from "../../data/profilePostData.json";
 import Image from "next/image";
 import Tabs from "@/components/PostTabs/Tabs";
+import MoreIcon from "../../public/assets/icons/More.png";
 
-interface Props {
-  profileData: {
-    id: number;
-    username: string;
-    profilePicUrl: string;
-    posts: {
+interface User {
+  id: number;
+  name: string;
+  url: string;
+  followed: string;
+  reels: string;
+  likes: number;
+  message: string;
+  postContent: string;
+}
+
+interface Post {
+  id: number;
+  username: string;
+  profilePicUrl: string;
+  posts: [
+    {
       id: number;
       imageUrl: string;
       caption: string;
-    }[];
-  };
+      reels: string;
+    }
+  ];
 }
-export default function profileId({ user, userPost }) {
+interface Props {
+  user: User;
+  userPost: Post;
+}
+
+interface Params {
+  id: string;
+}
+export default function profileId({ user, userPost }: Props) {
   const [posts, setPosts] = useState(userPost.posts);
 
- 
+  console.log(userPost.posts);
 
   if (!user) {
-    return <div className="mt-20">User not found</div>;
+    return <div className="mt-14">User not found</div>;
   }
   return (
-    <div className="mt-40 container mx-auto">
-      <div className="flex justify-start items-center mb-16">
-        <Image
-          key={user.id}
-          src={user.url}
-          alt={`Image`}
-          width={120}
-          height={120}
-          className="mr-4 rounded-full mr-20"
-        />
-        <div className="flex justify-start items-start flex-col ">
-          <section className="flex justify-start items-baseline direction-row pb-3 ">
-            <h1 className="font-medium text-2xl pr-5"> {user.name} </h1>
-            <button
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1.5 mr-1 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            >
-              Follow
-            </button>
+    <div className="mt-10 container p-4 mx-auto">
+      <div className="mb-13">
+        <div className="flex justify-start items-start  user_profile_heading">
+          {/* profile image */}
+          <Image
+            key={user.id}
+            src={user.url}
+            alt={`Image`}
+            width={120}
+            height={120}
+            className="mr-4 rounded-full mr-20"
+          />
+          {/* username - follow button */}
+          <div className="flex justify-start items-start flex-col user_profile_details">
+            {/* This section would display form 430px */}
+            <section className="flex justify-start items-center direction-row pb-2 profileData_settings profileData_settings_show">
+              <h1 className="font-medium text-1xl pr-2"> {user.name} </h1>
 
-            <div className="pl-5">
-              <div>
+              <div className="flex justify-start items-center direction-row Edit_Profile">
                 <button
-                  id="dropdownInformationButton"
-                  data-dropdown-toggle="dropdownInformation"
-                  className="text-dark hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   type="button"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-small rounded-lg text-sm px-3 py-1 mr-1 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                  Follow
                 </button>
-                {/* Dropdown menu */}
-                <div
-                  id="dropdownInformation"
-                  className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                >
-                  <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                    <div> {user.name}</div>
-                    <div className="font-medium truncate">
-                      name@flowbite.com
-                    </div>
-                  </div>
-                  <ul
-                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownInformationButton"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Dashboard
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Settings
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        Earnings
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="py-2">
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                <div className="pl-2">
+                  <div>
+                    <button
+                      id="dropdownInformationButton"
+                      data-dropdown-toggle="dropdownInformation"
+                      className="text-dark  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center inline-flex items-center dark:bg-transparent-600 dark:hover:bg-transparent-700 dark:focus:ring-transparent-800"
+                      type="button"
                     >
-                      Sign out
-                    </a>
+                      <Image
+                        src={MoreIcon}
+                        alt={`Image`}
+                        width={20}
+                        height={20}
+                        className="mr-4 rounded-full mr-20"
+                      />
+                    </button>
+                    {/* Dropdown menu */}
+                    <div
+                      id="dropdownInformation"
+                      className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                    >
+                      <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                        <div> {user.name}</div>
+                      </div>
+                      <ul
+                        className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="dropdownInformationButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Settings
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-          <section className="flex justify-start items-baseline direction-row  pb-3">
-            <h2 className="pr-4 font-medium">
-              1,3000 <span className="font-normal">post</span>
-            </h2>
-            <h2 className="pr-4 font-medium">
-              4M <span className="font-normal">followers</span>
-            </h2>
-            <h2 className="pr-4 font-medium">
-              1,250 <span className="font-normal">following</span>
-            </h2>
-          </section>
-          <section className=" pb-3">Terry luscas</section>
+            </section>
+            {/* number of followers - posts  */}
+            <section className="flex justify-start items-baseline direction-row user_followers  pb-3">
+              <h2 className="pr-4 font-medium">
+                1,3000 <span className="font-normal">post</span>
+              </h2>
+              <h2 className="pr-4 font-medium">
+                4M <span className="font-normal">followers</span>
+              </h2>
+              <h2 className="pr-4 font-medium">
+                1,250 <span className="font-normal">following</span>
+              </h2>
+            </section>
+            <section className=" pb-3 user_full_name">Terry luscas</section>
+          </div>
         </div>
       </div>
+
       <div>
-        <section className="flex flex-row">
+        <section className="flex pt-6  flex-row user_hightlight">
           {posts.slice(0, 4).map((post, index) => (
             <div className="pr-9 flex flex-col justify-center">
               <Image
@@ -156,7 +159,7 @@ export default function profileId({ user, userPost }) {
           <div className="flex">
             <div id="myTabContent">
               <div
-                className="hidden ml-3 columns-3 p-4 rounded-lg "
+                className="hidden  columns-3  rounded-lg "
                 id="UserPost"
                 role="tabpanel"
               >
@@ -257,7 +260,7 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: Params }) {
   const user = profileData.userData.find(
     (user) => user.id.toString() === params.id.toString()
   );

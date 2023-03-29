@@ -18,86 +18,88 @@ export default function UserProfile() {
             <section className="flex justify-start items-baseline direction-row pb-3 profileData_settings">
               <h1 className="font-normal text-xl pr-5"> {profileData.name}</h1>
 
-              <button
-                type="button"
-                className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
-              >
-                Edit Profile
-              </button>
+              <div className="flex justify-start items-baseline direction-row Edit_Profile">
+                <button
+                  type="button"
+                  className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                >
+                  Edit Profile
+                </button>
 
-              <div className="pl-5 flex justify-start items-baseline ">
-                <div>
-                  <Image
-                    id="dropdownInformationButton"
-                    data-dropdown-toggle="dropdownInformation"
-                    src={SettingsIcon}
-                    alt="SettingsIcon"
-                    width={20}
-                  />
-                  {/* Dropdown menu */}
-                  <div
-                    id="dropdownInformation"
-                    className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                  >
-                    <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                      <div>" user.name "</div>
-                      <div className="font-medium truncate">
-                        name@flowbite.com
-                      </div>
-                    </div>
-                    <ul
-                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                      aria-labelledby="dropdownInformationButton"
+                <div className="pl-2 ">
+                  <div>
+                    <Image
+                      id="dropdownInformationButton"
+                      data-dropdown-toggle="dropdownInformation"
+                      src={SettingsIcon}
+                      alt="SettingsIcon"
+                      width={20}
+                    />
+                    {/* Dropdown menu */}
+                    <div
+                      id="dropdownInformation"
+                      className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                     >
-                      <li>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Dashboard
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Settings
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Earnings
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="py-2">
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                      <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                        <div>" user.name "</div>
+                        <div className="font-medium truncate">
+                          name@flowbite.com
+                        </div>
+                      </div>
+                      <ul
+                        className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="dropdownInformationButton"
                       >
-                        Sign out
-                      </a>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Settings
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Earnings
+                          </a>
+                        </li>
+                      </ul>
+                      <div className="py-2">
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        >
+                          Sign out
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
             <section className="flex justify-start items-baseline direction-row  pb-3">
-              <h2 className="pr-4 font-medium">
+              <h2 className="pr-4 font-semibold">
                 1,3000 <span className="font-normal">post</span>
               </h2>
-              <h2 className="pr-4 font-medium">
+              <h2 className="pr-4 font-semibold">
                 4M <span className="font-normal">followers</span>
               </h2>
-              <h2 className="pr-4 font-medium">
+              <h2 className="pr-4 font-semibold">
                 1,250 <span className="font-normal">following</span>
               </h2>
             </section>
-            <section className=" pb-3">Terry luscas</section>
+            <section className=" pb-3 pr-4 font-bold user_full_name">Terry luscas</section>
           </div>
         </div>
       ))}

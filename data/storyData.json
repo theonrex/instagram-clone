@@ -53,6 +53,42 @@
       "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/multiplepostpictures.png",
       "likes": 454000,
       "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
+    },
+    {
+      "id": 7,
+      "name": "ednamanz",
+      "url": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post%20(2).png",
+      "followed": "followed by harrygate + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png",
+      "likes": 123000,
+      "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
+    },
+    {
+      "id": 8,
+      "name": "christinnast",
+      "url": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post%20(3).png",
+      "followed": "followed by terylucas + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png",
+      "likes": 34334,
+      "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
+    },
+    {
+      "id": 9,
+      "name": "wizzy",
+      "url": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post%20(4).png",
+      "followed": "followed by ednamanz + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/multiplepostpictures.png",
+      "likes": 55100,
+      "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
+    },
+    {
+      "id": 10,
+      "name": "rex",
+      "url": "https://ipfs.thirdwebcdn.com/ipfs/QmQRuCjLR3ERtvYbehwtqhmAujq1X4DCFKD9fuDgDSZRdm/Small-Post%20(5).png",
+      "followed": "followed by christinnast + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/multiplepostpictures.png",
+      "likes": 454000,
+      "postContent": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia"
     }
   ]
 }

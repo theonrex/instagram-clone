@@ -8,26 +8,30 @@
 
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
- #cta-button-sidebar {
-  background-color: red !important;
+#cta-button-sidebar {
+    background-color: red !important;
 }
 
-#redddd{
+#redddd {
     background-color: red !important;
 
 }
-nav{
+
+nav {
     margin-bottom: 5em !important;
 }
 
-main{
+main {
     display: block;
 }
 
-hr{
+hr {
     margin: 1em;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
