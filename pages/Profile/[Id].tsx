@@ -41,7 +41,7 @@ export default function profileId({ user, userPost }: Props) {
   const [posts, setPosts] = useState(userPost.posts);
 
   if (!user) {
-    return <div className="mt-14 font-bold">User not found</div>;
+    return <div className="mt-14 ">User not found</div>;
   }
   return (
     <div className="mt-10 container p-4 mx-auto">
@@ -139,7 +139,7 @@ export default function profileId({ user, userPost }: Props) {
       <div>
         <section className="flex pt-6  flex-row user_hightlight">
           {posts.slice(0, 4).map((post, index) => (
-            <div className="pr-9 flex flex-col justify-center">
+            <div className="pr-9 flex flex-col justify-center" key={index}>
               <Image
                 key={post.id}
                 src={post.imageUrl}
@@ -248,14 +248,16 @@ export default function profileId({ user, userPost }: Props) {
 }
 
 export async function getStaticPaths() {
-  const paths = [
-    ...profileData?.userData.map((user) => ({
-      params: { id: user.id.toString() },
-    })),
-    ...profilePostData?.profilePostData.map((user) => ({
-      params: { id: user.id.toString() },
-    })),
-  ];
+  const userDataPaths = profileData?.userData.map((user) => ({
+    params: { id: user.id.toString() },
+  }));
+
+  const postPaths = profilePostData?.profilePostData.map((post) => ({
+    params: { id: post.id.toString() },
+  }));
+
+  const paths = [...userDataPaths, ...postPaths];
+
   return { paths, fallback: false };
 }
 
