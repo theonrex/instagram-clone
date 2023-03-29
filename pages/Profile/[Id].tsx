@@ -6,7 +6,7 @@ import Tabs from "@/components/PostTabs/Tabs";
 import MoreIcon from "../../public/assets/icons/More.png";
 
 interface User {
-  id: number;
+  id: string;
   name: string;
   url: string;
   followed: string;
@@ -17,12 +17,12 @@ interface User {
 }
 
 interface Post {
-  id: number;
+  id: string;
   username: string;
   profilePicUrl: string;
   posts: [
     {
-      id: number;
+      id: string;
       imageUrl: string;
       caption: string;
       reels: string;
