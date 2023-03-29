@@ -19,7 +19,7 @@ export default function Navbar() {
           <Image
             src={InstagramLogo}
             alt="Instagram Logo "
-            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm pl-1 py-2.5 text-center mr-3 md:mr-0  w-4/5 "
+            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm pl-1 py-2.5 text-center mr-3 md:mr-0  w-3/5 "
             height={50}
           />
         </Link>

@@ -30,17 +30,17 @@ interface Post {
   ];
 }
 interface Props {
-  user: User;
+  userID: User;
   userPost: Post;
 }
 
 interface Params {
   id: string;
 }
-export default function profileId({ user, userPost }: Props) {
+export default function profileId({ userID, userPost }: Props) {
   const [posts, setPosts] = useState(userPost.posts);
 
-  if (!user) {
+  if (!userID) {
     return <div className="mt-14 ">User not found</div>;
   }
   return (
@@ -49,8 +49,8 @@ export default function profileId({ user, userPost }: Props) {
         <div className="flex justify-start items-start  user_profile_heading">
           {/* profile image */}
           <Image
-            key={user.id}
-            src={user.url}
+            key={userID.id}
+            src={userID.url}
             alt={`Image`}
             width={120}
             height={120}
@@ -60,7 +60,7 @@ export default function profileId({ user, userPost }: Props) {
           <div className="flex justify-start items-start flex-col user_profile_details">
             {/* This section would display form 430px */}
             <section className="flex justify-start items-center direction-row pb-2 profileData_settings profileData_settings_show">
-              <h1 className="font-medium text-1xl pr-2"> {user.name} </h1>
+              <h1 className="font-medium text-1xl pr-2"> {userID.name} </h1>
 
               <div className="flex justify-start items-center direction-row Edit_Profile">
                 <button
@@ -91,7 +91,7 @@ export default function profileId({ user, userPost }: Props) {
                       className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                     >
                       <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                        <div> {user.name}</div>
+                        <div> {userID.name}</div>
                       </div>
                       <ul
                         className="py-2 text-sm text-gray-700 dark:text-gray-200"
