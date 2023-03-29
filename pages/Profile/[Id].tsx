@@ -261,28 +261,21 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-
 export async function getStaticProps({ params }: { params: Params }) {
   const user = profileData.userData.find(
-    (user) => user.id.toString() === params?.id?.toString()
+    (user) => user.id.toString() === params.id.toString()
   );
 
   const userPost = profilePostData.profilePostData.find(
-    (user) => user.id.toString() === params?.id?.toString()
+    (user) => user.id.toString() === params.id.toString()
   );
 
   if (!user || !userPost) {
     return {
       notFound: true,
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
     };
   }
 
   return { props: { user, userPost } };
 }
 
-
-//profilePostData
