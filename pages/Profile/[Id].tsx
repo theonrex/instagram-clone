@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import profileData from "../../data/usersData.json";
-import profilePostData from "../../data/profilePostData.json";
+import userDataID from "../../data/usersData.json";
+import profileDataID from "../../data/profilePostData.json";
 import Image from "next/image";
 import Tabs from "@/components/PostTabs/Tabs";
 import MoreIcon from "../../public/assets/icons/More.png";
@@ -248,11 +248,11 @@ export default function profileId({ user, userPost }: Props) {
 }
 
 export async function getStaticPaths() {
-  const userDataPaths = profileData?.userData.map((user) => ({
+  const userDataPaths = userDataID?.userData.map((user) => ({
     params: { id: user.id?.toString() },
   }));
 
-  const postPaths = profilePostData?.profilePostData.map((post) => ({
+  const postPaths = profileDataID?.profilePostData.map((post) => ({
     params: { id: post.id?.toString() },
   }));
 
@@ -262,22 +262,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: Params }) {
-  const user = profileData.userData.find(
+  const userID = userDataID.userData.find(
     (user) => user.id?.toString() === params.id?.toString()
   );
 
-  const userPost = profilePostData.profilePostData.find(
+  const userPost = profileDataID.profilePostData.find(
     (user) => user.id?.toString() === params.id?.toString()
   );
 
-  if (!user || !userPost) {
+  if (!userID || !userPost) {
     return {
       notFound: true,
     };
   }
 
-  return { props: { user, userPost } };
+  return { props: { userID, userPost } };
 }
-
-
-
