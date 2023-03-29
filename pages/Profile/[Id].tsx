@@ -41,7 +41,7 @@ export default function profileId({ user, userPost }: Props) {
   const [posts, setPosts] = useState(userPost.posts);
 
   if (!user) {
-    return <div className="mt-14">User not found</div>;
+    return <div className="mt-14 font-bold">User not found</div>;
   }
   return (
     <div className="mt-10 container p-4 mx-auto">
@@ -248,15 +248,17 @@ export default function profileId({ user, userPost }: Props) {
 }
 
 export async function getStaticPaths() {
-  const paths = profileData?.userData.map((user) => ({
-    params: { id: user.id.toString() },
-  }));
-
-  const post = profilePostData?.profilePostData.map((user) => ({
-    params: { id: user.id.toString() },
-  }));
+  const paths = [
+    ...profileData?.userData.map((user) => ({
+      params: { id: user.id.toString() },
+    })),
+    ...profilePostData?.profilePostData.map((user) => ({
+      params: { id: user.id.toString() },
+    })),
+  ];
   return { paths, fallback: false };
 }
+
 
 export async function getStaticProps({ params }: { params: Params }) {
   const user = profileData.userData.find(
