@@ -14,7 +14,6 @@ export default function InstagramPost() {
             <ul className="flex items-center">
               <Link
                 href={`/profile/${post.id}`}
-                as={`/profile/${post.id}`}
                 className=" flex items-center"
               >
                 <Image
