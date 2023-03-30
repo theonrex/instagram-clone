@@ -13,7 +13,10 @@ export default function InstagramPost() {
           <div className="flex items-center justify-between mt-2 mb-3 mt-6 mr-4 ml-4 ">
             <ul className="flex items-center">
               <Link
-                href={`/profile/${post.id}`}
+                href={{
+                  pathname: "/profile/[id]",
+                  query: { id: post.id },
+                }}
                 className=" flex items-center"
               >
                 <Image
