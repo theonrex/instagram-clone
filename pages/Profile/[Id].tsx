@@ -4,9 +4,10 @@ import profileDataID from "../../data/profilePostData.json";
 import Image from "next/image";
 import Tabs from "@/components/PostTabs/Tabs";
 import MoreIcon from "../../public/assets/icons/More.png";
+import { useRouter } from "next/router";
 
 interface User {
-  id: string;
+  Id: string;
   name: string;
   url: string;
   followed: string;
@@ -17,7 +18,7 @@ interface User {
 }
 
 interface Post {
-  id: string;
+  Id: string;
   username: string;
   profilePicUrl: string;
   posts: [
@@ -35,17 +36,51 @@ interface Props {
 }
 
 interface Params {
-  id: string;
+  Id: string;
 }
-export default function profileId({ userID, userPost }: Props) {
-  const [posts, setPosts] = useState(userPost.posts);
+export default function profileId() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const userID = userDataID.userData.find((user) => user.id === Number(id));
+  const userPost = profileDataID.profilePostData.find(
+    (profile) => profile.id === Number(id)
+  );
+
+  // const [postState, setPostsState] = useState(userPost?.posts);
+
+  const postState = userPost?.posts;
 
   if (!userID) {
     return <div className="mt-14 ">User not found</div>;
   }
   return (
     <div className="mt-10 container p-4 mx-auto">
-      <div className="mb-13">
+      <div className="mb-9">
+        <section className="flex justify-end items-center mb-2 Edit_Profile">
+          <button
+            type="button"
+            className="
+text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800            
+            "
+          >
+            Follow
+          </button>
+          <button
+            id="dropdownInformationButton"
+            data-dropdown-toggle="dropdownInformation"
+            className="text-dark  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center inline-flex items-center dark:bg-transparent-600 dark:hover:bg-transparent-700 dark:focus:ring-transparent-800"
+            type="button"
+          >
+            <Image
+              src={MoreIcon}
+              alt={`Image`}
+              width={20}
+              height={20}
+              className="mr-4 rounded-full mr-20"
+            />
+          </button>
+        </section>
         <div className="flex justify-start items-start  user_profile_heading">
           {/* profile image */}
           <Image
@@ -56,35 +91,15 @@ export default function profileId({ userID, userPost }: Props) {
             height={120}
             className="mr-4 rounded-full mr-20"
           />
-          {/* username - follow button */}
+          {/* username */}
           <div className="flex justify-start items-start flex-col user_profile_details">
             {/* This section would display form 430px */}
             <section className="flex justify-start items-center direction-row pb-2 profileData_settings profileData_settings_show">
               <h1 className="font-medium text-1xl pr-2"> {userID.name} </h1>
 
               <div className="flex justify-start items-center direction-row Edit_Profile">
-                <button
-                  type="button"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-small rounded-lg text-sm px-3 py-1 mr-1 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                >
-                  Follow
-                </button>
                 <div className="pl-2">
                   <div>
-                    <button
-                      id="dropdownInformationButton"
-                      data-dropdown-toggle="dropdownInformation"
-                      className="text-dark  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center inline-flex items-center dark:bg-transparent-600 dark:hover:bg-transparent-700 dark:focus:ring-transparent-800"
-                      type="button"
-                    >
-                      <Image
-                        src={MoreIcon}
-                        alt={`Image`}
-                        width={20}
-                        height={20}
-                        className="mr-4 rounded-full mr-20"
-                      />
-                    </button>
                     {/* Dropdown menu */}
                     <div
                       id="dropdownInformation"
@@ -135,33 +150,36 @@ export default function profileId({ userID, userPost }: Props) {
           </div>
         </div>
       </div>
-
       <div>
         <section className="flex pt-6  flex-row user_hightlight">
-          {posts.slice(0, 4).map((post, index) => (
-            <div className="pr-9 flex flex-col justify-center" key={index}>
-              <Image
-                key={post.id}
-                src={post.imageUrl}
-                alt={`Image`}
-                width={40}
-                height={40}
-                className=" rounded-full"
-              />
-              <p className="text-sm">{userPost.username} </p>{" "}
-            </div>
-          ))}
+          {postState &&
+            postState.slice(0, 4).map((post, index) => (
+              <div className="pr-5 flex flex-col justify-center " key={index}>
+                <Image
+                  src={post.imageUrl}
+                  alt={`Image`}
+                  width={40}
+                  height={40}
+                  className=" rounded-full"
+                />
+                <p className="text-sm text-center">memories </p>{" "}
+              </div>
+            ))}
         </section>
+        {/*  */}
+
+        {/*  */}
         <div>
           <Tabs />
-          <div className="flex">
-            <div id="myTabContent">
-              <div
-                className="hidden  columns-3  rounded-lg "
-                id="UserPost"
-                role="tabpanel"
-              >
-                {posts.map((post, index) => (
+          <div id="myTabContent">
+            <div
+              className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="userPost"
+              role="tabpanel"
+              aria-labelledby="userPost-tab"
+            >
+              {postState &&
+                postState.map((post, index) => (
                   <div key={index} className="relative mb-4">
                     <Image
                       src={post?.imageUrl}
@@ -181,63 +199,62 @@ export default function profileId({ userID, userPost }: Props) {
                     ) : null}
                   </div>
                 ))}
-              </div>
-              <div
-                className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                id="guides"
-                role="tabpanel"
-                aria-labelledby="guides-tab"
-              >
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Guides Feature Not Available
-                  <br />
-                  <strong className="font-medium text-gray-800 dark:text-white">
-                    We will update you once its available.
-                  </strong>
-                </p>
-              </div>
-              <div
-                className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                id="reels"
-                role="tabpanel"
-                aria-labelledby="reels-tab"
-              >
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Reels Feature Not Available
-                  <br />
-                  <strong className="font-medium text-gray-800 dark:text-white">
-                    We will update you once its available.
-                  </strong>
-                </p>
-              </div>
-              <div
-                className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                id="videos"
-                role="tabpanel"
-                aria-labelledby="videos-tab"
-              >
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Videos Feature Not Available
-                  <br />
-                  <strong className="font-medium text-gray-800 dark:text-white">
-                    We will update you once its available.
-                  </strong>
-                </p>
-              </div>{" "}
-              <div
-                className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
-                id="tagged"
-                role="tabpanel"
-                aria-labelledby="tagged-tab"
-              >
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  You have not been tagged on an post
-                  <br />
-                  <strong className="font-medium text-gray-800 dark:text-white">
-                    We will update you once its available.
-                  </strong>
-                </p>
-              </div>
+            </div>
+            <div
+              className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="guides"
+              role="tabpanel"
+              aria-labelledby="guides-tab"
+            >
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Guides Feature Not Available
+                <br />
+                <strong className="font-medium text-gray-800 dark:text-white">
+                  We will update you once its available.
+                </strong>
+              </p>
+            </div>
+            <div
+              className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="reels"
+              role="tabpanel"
+              aria-labelledby="reels-tab"
+            >
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Reels Feature Not Available
+                <br />
+                <strong className="font-medium text-gray-800 dark:text-white">
+                  We will update you once its available.
+                </strong>
+              </p>
+            </div>
+            <div
+              className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="videos"
+              role="tabpanel"
+              aria-labelledby="videos-tab"
+            >
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Videos Feature Not Available
+                <br />
+                <strong className="font-medium text-gray-800 dark:text-white">
+                  We will update you once its available.
+                </strong>
+              </p>
+            </div>{" "}
+            <div
+              className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="tagged"
+              role="tabpanel"
+              aria-labelledby="tagged-tab"
+            >
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                You have not been tagged on an post
+                <br />
+                <strong className="font-medium text-gray-800 dark:text-white">
+                  We will update you once its available.
+                </strong>
+              </p>
             </div>
           </div>
         </div>
@@ -245,36 +262,4 @@ export default function profileId({ userID, userPost }: Props) {
       <div></div>
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  const userDataPaths = userDataID?.userData.map((user) => ({
-    params: { id: user.id?.toString() },
-  }));
-
-  const postPaths = profileDataID?.profilePostData.map((post) => ({
-    params: { id: post.id?.toString() },
-  }));
-
-  const paths = [...userDataPaths, ...postPaths];
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }: { params: Params }) {
-  const userID = userDataID.userData.find(
-    (user) => user.id?.toString() === params.id?.toString()
-  );
-
-  const userPost = profileDataID.profilePostData.find(
-    (user) => user.id?.toString() === params.id?.toString()
-  );
-
-  if (!userID || !userPost) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return { props: { userID, userPost } };
 }

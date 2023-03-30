@@ -10,7 +10,7 @@ export default function UserProfileTab() {
       <div>
         <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
           <ul
-            className="flex flex-wrap items-baseline justify-center -mb-px text-sm font-medium text-center"
+            className="flex items-baseline justify-center -mb-px text-sm font-medium text-center scrollbar"
             id="myTab"
             data-tabs-toggle="#myTabContent"
             role="tablist"
@@ -90,13 +90,11 @@ export default function UserProfileTab() {
             aria-labelledby="saved-tab"
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              This is some placeholder content the{"{"}" "{"}"}
+       
               <strong className="font-medium text-gray-800 dark:text-white">
-                saved tab's associated content
+               No Saved Post
               </strong>
-              . Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
+            
             </p>
           </div>
           <div
@@ -106,13 +104,11 @@ export default function UserProfileTab() {
             aria-labelledby="tagged-tab"
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              This is some placeholder content the{"{"}" "{"}"}
+       
               <strong className="font-medium text-gray-800 dark:text-white">
-                tagged tab's associated content
+              Not Yet Tagged
               </strong>
-              . Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
+          
             </p>
           </div>
         </div>

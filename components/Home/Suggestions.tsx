@@ -1,6 +1,7 @@
 import React from "react";
 import SuggestionsData from "../../data/usersData.json";
 import Image from "next/image";
+
 export default function Suggestions() {
   return (
     <div>

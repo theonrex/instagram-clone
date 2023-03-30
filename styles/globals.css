@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
 }
 
 nav {
-    margin-bottom: 5em !important;
+    padding-bottom: 5em !important;
 }
 
 main {

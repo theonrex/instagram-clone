@@ -20,11 +20,11 @@ export default function Tabs() {
             <Image src={postIcon} alt="posticons" width={10} height={10} />
             <button
               className="inline-block pl-2  border-b-2 rounded-t-lg"
-              id="UserPost-tab"
-              data-tabs-target="#UserPost"
+              id="userPost-tab"
+              data-tabs-target="#userPost"
               type="button"
               role="tab"
-              aria-controls="UserPost"
+              aria-controls="userPost"
               aria-selected="false"
             >
               Post

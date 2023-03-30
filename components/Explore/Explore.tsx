@@ -20,7 +20,7 @@ export default function Explore() {
 
   return (
     <div>
-      <div className="grid-container ">
+      <div className="grid-container explore_body">
         <div className="item1 relative">
           <Link
             href="#"
@@ -32,14 +32,14 @@ export default function Explore() {
               alt={`Image`}
               width={700}
               height={700}
-              className=" w-full aspect-square"
+              className=" w-full aspect-square explore_img"
             />
             <Image
               src={getFirstDataReels}
               alt={`Image`}
               width={40}
               height={40}
-              className="absolute right-0 top-0 mr-6 mt-5 aspect-square"
+              className="absolute right-0 top-0 mr-6 mt-5 aspect-square explore_icon"
             />
           </Link>
         </div>
@@ -54,14 +54,14 @@ export default function Explore() {
               alt={`Image`}
               width={700}
               height={700}
-              className=" w-full aspect-square"
+              className=" w-full aspect-square explore_img"
             />
             <Image
               src={getsecondDataReels}
               alt={`Image`}
               width={40}
               height={40}
-              className="absolute right-0 top-0 mr-6 mt-5 aspect-square"
+              className="absolute right-0 top-0 mr-6 mt-5 aspect-square explore_icon"
             />
           </Link>
         </div>
@@ -76,14 +76,14 @@ export default function Explore() {
               alt={`Image`}
               width={700}
               height={700}
-              className=" w-full aspect-square"
+              className=" w-full aspect-square explore_img"
             />
             <Image
               src={getThirdDataReels}
               alt={`Image`}
               width={40}
               height={40}
-              className="absolute right-0 top-0 mr-6 mt-5 aspect-square"
+              className="absolute right-0 top-0 mr-6 mt-5 aspect-square explore_icon"
             />
           </Link>
         </div>{" "}
@@ -98,14 +98,14 @@ export default function Explore() {
               alt={`Image`}
               width={700}
               height={700}
-              className=" w-full aspect-square"
+              className=" w-full aspect-square explore_img"
             />
             <Image
               src={getForthDataReels}
               alt={`Image`}
               width={40}
               height={40}
-              className="absolute right-0 top-0 mr-6 mt-5 aspect-square"
+              className="absolute right-0 top-0 mr-6 mt-5 aspect-square explore_icon"
             />
           </Link>
         </div>{" "}
@@ -120,14 +120,14 @@ export default function Explore() {
               alt={`Image`}
               width={700}
               height={700}
-              className=" w-full aspect-square"
+              className=" w-full aspect-square explore_img"
             />
             <Image
               src={getFifthDataReels}
               alt={`Image`}
               width={40}
               height={40}
-              className="absolute right-0 top-0 mr-6 mt-5 aspect-square"
+              className="absolute right-0 top-0 mr-6 mt-5 aspect-square explore_icon"
             />
           </Link>
         </div>{" "}
@@ -142,14 +142,14 @@ export default function Explore() {
               alt={`Image`}
               width={700}
               height={700}
-              className=" w-full aspect-square"
+              className=" w-full aspect-square explore_img"
             />
             <Image
               src={getFifthDataReels}
               alt={`Image`}
               width={40}
               height={40}
-              className="absolute right-0 top-0 mr-6 mt-5 aspect-square"
+              className="absolute right-0 top-0 mr-6 mt-5 aspect-square explore_icon"
             />
           </Link>
         </div>{" "}
@@ -164,14 +164,14 @@ export default function Explore() {
               alt={`Image`}
               width={700}
               height={700}
-              className=" w-full aspect-square"
+              className=" w-full aspect-square explore_img"
             />
             <Image
               src={getSixthDataReels}
               alt={`Image`}
               width={40}
               height={40}
-              className="absolute right-0 top-0 mr-6 mt-5 aspect-square"
+              className="absolute right-0 top-0 mr-6 mt-5 aspect-square explore_icon"
             />
           </Link>
         </div>

@@ -3,7 +3,7 @@ import SearchInput from "../searchInput/SearchInput";
 import HomeIcon from "../../public/assets/Home.svg";
 import MessageIcon from "../../public/assets/Message.svg";
 import PostIcon from "../../public/assets/NewPosts.svg";
-import GpsIcon from "../../public/assets/Gpss.svg";
+import exploreIcon from "../../public/assets/Gpss.svg";
 import FavoriteIcon from "../../public/assets/FavoriteIcon.svg";
 import SearchIcon from "../../public/assets/icons/icons8-search-150.png";
 import InstagramLogo from "../../public/assets/Logo.png";
@@ -75,27 +75,27 @@ export default function BottomNav() {
             <div className="tooltip-arrow" data-popper-arrow />
           </div>
           {/* post */}
-          {/* GpsIcon */}
+          {/* exploreIcon */}
 
           <button
-            data-tooltip-target="tooltip-gps"
+            data-tooltip-target="tooltip-explore"
             type="button"
             className="inline-flex flex-col items-center justify-center px-2 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
-            <Link href="/">
-              <Image src={GpsIcon} alt="HomeIcon" width={20} />
+            <Link href="/explore">
+              <Image src={exploreIcon} alt="HomeIcon" width={20} />
             </Link>
-            <span className="sr-only">gps</span>
+            <span className="sr-only">Explore</span>
           </button>
           <div
-            id="tooltip-gps"
+            id="tooltip-explore"
             role="tooltip"
             className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
           >
-            Gps
+            Explore
             <div className="tooltip-arrow" data-popper-arrow />
           </div>
-          {/* GpsIcon */}
+          {/* exploreIcon */}
 
           {/* FavoriteIcon */}
           <button

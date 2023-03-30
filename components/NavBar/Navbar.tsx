@@ -19,8 +19,8 @@ export default function Navbar() {
           <Image
             src={InstagramLogo}
             alt="Instagram Logo "
-            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm pl-1 py-2.5 text-center mr-3 md:mr-0  w-3/5 "
-            height={50}
+            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm pl-1 py-2.5 text-center mr-1 md:mr-0  w-3/5 instagram_logo"
+            height={30}
           />
         </Link>
 
@@ -82,15 +82,15 @@ export default function Navbar() {
             height={40}
             width={65}
           />
-          <Link href="/my-profile">
+          <a href="/my-profile">
             <Image
               src={ProflieIcon}
               alt="home icon"
-              className="text-white profile_image   rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 w-full home_icon"
-              height={70}
-              width={75}
+              className="text-white profile_image  rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 w-full home_icon"
+              height={60}
+              width={60}
             />
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
