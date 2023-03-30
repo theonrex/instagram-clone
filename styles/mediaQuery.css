@@ -107,9 +107,7 @@
         display: flex;
     }
 
-    .home_icon {
-        width: 80%;
-    }
+  
 
     .main_profile_icon{
         width: 10px;
@@ -197,13 +195,7 @@
 
     }
 
-    .home_icon {
-        width: 70%;
-    }
-
-    .instagram_logo {
-        width: 20%;
-    }
+  
 }
 
 /*  */
