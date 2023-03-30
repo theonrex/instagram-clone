@@ -16,13 +16,21 @@ function ReadMore({ content, maxChars = 30 }: Props) {
   const shouldShowButton = truncatedContent !== content;
 
   return (
-    <div className="flex items-center">
-      <p>{isExpanded ? content : truncatedContent + "..."}</p>
-      {shouldShowButton && (
-        <button className="font-normal text-slate-400" onClick={toggleExpand}>
-          {isExpanded ? "Read less" : "Read more"}
-        </button>
-      )}
+    <div className="flex items-center flex-col">
+      <p>
+        {isExpanded ? content : truncatedContent + "..."}
+
+        <span>
+          {shouldShowButton && (
+            <button
+              className="font-bold text-slate-400 fex items-center flex-col"
+              onClick={toggleExpand}
+            >
+              {isExpanded ? "read less" : "read more"}
+            </button>
+          )}
+        </span>
+      </p>
     </div>
   );
 }

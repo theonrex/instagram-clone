@@ -72,7 +72,7 @@ export default function InstagramPost() {
             <div className="font-bold flex items-baseline post_body_details">
               {post.name}
               <span className="pl-2 font-normal flex text-sm">
-                <ReadMore content={post.postContent} maxChars={20} />
+                <ReadMore content={post.postContent} maxChars={40} />
               </span>
             </div>
             <p className="text-stone-700 pt-1 pb-1">View all 100 comments</p>
