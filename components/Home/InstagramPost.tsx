@@ -12,9 +12,9 @@ export default function InstagramPost() {
         <div className=" border border-gray-100 mb-8" key={index}>
           <div className="flex items-center justify-between mt-2 mb-3 mt-6 mr-4 ml-4 ">
             <ul className="flex items-center">
-              <Link
+              <a
                 href={`/profile/${post.id}`}
-                className=" flex items-center"
+                className=" flex items-center post_profile_picture"
               >
                 <Image
                   key={post.id}
@@ -22,11 +22,11 @@ export default function InstagramPost() {
                   alt={`Image ${post.id}`}
                   width={30}
                   height={30}
-                  className="mr-3 rounded-full "
+                  className="mr-3 rounded-full  "
                   loading="lazy"
                 />
                 <h4 className="font-semibold">{post.name}</h4>
-              </Link>
+              </a>
             </ul>
 
             <ul>
@@ -39,10 +39,11 @@ export default function InstagramPost() {
             key={post.id}
             src={post.url}
             alt={`Image ${post.id}`}
-            width={190}
-            height={190}
-            className="mr-4 w-full"
+            width={440}
+            height={490}
+            className="mr-4 w-full "
             loading="lazy"
+            quality="70"
           />
           {/* Like, comment, share, save icons */}
           <div className="flex justify-between justify-between mt-2 mb-3 post_icons">

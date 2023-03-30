@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function UserProfilePost() {
   return (
     <div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
           {userData.userData.map((userData) => (
             <Image
-              className="h-auto max-w-full p-2 rounded-lg"
+              className="h-auto w-full p-2 m-auto rounded-lg"
               src={userData.url}
               alt="userData"
               width={300}
@@ -19,7 +19,7 @@ export default function UserProfilePost() {
         <div>
           {userData.userData.map((userData) => (
             <Image
-              className="h-auto max-w-full  p-2 rounded-lg"
+              className="h-auto w-full  p-2 rounded-lg"
               src={userData.url}
               alt="userData"
               width={300}
@@ -30,7 +30,7 @@ export default function UserProfilePost() {
         <div>
           {userData.userData.map((userData) => (
             <Image
-              className="h-auto max-w-full  p-2 rounded-lg"
+              className="h-auto w-full  p-2 rounded-lg"
               src={userData.url}
               alt="userData"
               width={300}

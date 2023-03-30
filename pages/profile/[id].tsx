@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import userDataID from "../../data/usersData.json";
-import profileDataID from "../../data/profilePostData.json";
+import profileData from "../../data/usersData.json";
+import profilePostData from "../../data/profilePostData.json";
 import Image from "next/image";
 import Tabs from "@/components/PostTabs/Tabs";
 import MoreIcon from "../../public/assets/icons/More.png";
-import { useRouter } from "next/router";
+
 
 interface User {
-  Id: string;
+  id: string;
   name: string;
   url: string;
   followed: string;
@@ -18,7 +18,7 @@ interface User {
 }
 
 interface Post {
-  Id: string;
+  id: string;
   username: string;
   profilePicUrl: string;
   posts: [
@@ -31,29 +31,19 @@ interface Post {
   ];
 }
 interface Props {
-  userID: User;
+  user: User;
   userPost: Post;
 }
 
 interface Params {
-  Id: string;
+  id: string;
 }
-export default function profileId() {
-  const router = useRouter();
-  const { id } = router.query;
+export default function profileId({ user, userPost }: Props) {
+   const [posts, setPosts] = useState(userPost.posts);
 
-  const userID = userDataID.userData.find((user) => user.id === Number(id));
-  const userPost = profileDataID.profilePostData.find(
-    (profile) => profile.id === Number(id)
-  );
-
-  // const [postState, setPostsState] = useState(userPost?.posts);
-
-  const postState = userPost?.posts;
-
-  if (!userID) {
-    return <div className="mt-14 ">User not found</div>;
-  }
+   if (!user) {
+     return <div className="mt-14 ">User not found</div>;
+   }
   return (
     <div className="mt-10 container p-4 mx-auto">
       <div className="mb-9">
@@ -81,21 +71,21 @@ text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-m
             />
           </button>
         </section>
-        <div className="flex justify-start items-start  user_profile_heading">
+        <div className="flex justify-start items-start   user_profile_heading">
           {/* profile image */}
           <Image
-            key={userID.id}
-            src={userID.url}
+            key={user.id}
+            src={user.url}
             alt={`Image`}
             width={120}
             height={120}
-            className="mr-4 rounded-full mr-20"
+            className="mr-4 rounded-full mr-20 "
           />
           {/* username */}
           <div className="flex justify-start items-start flex-col user_profile_details">
             {/* This section would display form 430px */}
             <section className="flex justify-start items-center direction-row pb-2 profileData_settings profileData_settings_show">
-              <h1 className="font-medium text-1xl pr-2"> {userID.name} </h1>
+              <h1 className="font-medium pl-2 pr-2"> {user.name} </h1>
 
               <div className="flex justify-start items-center direction-row Edit_Profile">
                 <div className="pl-2">
@@ -105,8 +95,8 @@ text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-m
                       id="dropdownInformation"
                       className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                     >
-                      <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                        <div> {userID.name}</div>
+                      <div className="px-4 pl-2  gray-900 dark:text-white">
+                        <div> {user.name}</div>
                       </div>
                       <ul
                         className="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -135,7 +125,7 @@ text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-m
               </div>
             </section>
             {/* number of followers - posts  */}
-            <section className="flex justify-start items-baseline direction-row user_followers  pb-3">
+            <section className="flex justify-start items-baseline direction-row user_followers  pb-2">
               <h2 className="pr-4 font-medium">
                 1,3000 <span className="font-normal">post</span>
               </h2>
@@ -146,21 +136,26 @@ text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-m
                 1,250 <span className="font-normal">following</span>
               </h2>
             </section>
-            <section className=" pb-3 user_full_name">Terry luscas</section>
+            <section className=" pb-3 font-medium pl-2 pr-2 user_full_name">
+              Terry Luscas
+            </section>
           </div>
         </div>
       </div>
       <div>
         <section className="flex pt-6  flex-row user_hightlight">
-          {postState &&
-            postState.slice(0, 4).map((post, index) => (
-              <div className="pr-5 flex flex-col justify-center " key={index}>
+          {posts &&
+            posts.slice(0, 4).map((post, index) => (
+              <div
+                className="pr-5 flex flex-col items-center justify-center "
+                key={index}
+              >
                 <Image
                   src={post.imageUrl}
                   alt={`Image`}
                   width={40}
                   height={40}
-                  className=" rounded-full"
+                  className=" rounded-full "
                 />
                 <p className="text-sm text-center">memories </p>{" "}
               </div>
@@ -173,28 +168,28 @@ text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-m
           <Tabs />
           <div id="myTabContent">
             <div
-              className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              className="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800 columns-2 sm:columns-3 profile_post_section"
               id="userPost"
               role="tabpanel"
               aria-labelledby="userPost-tab"
             >
-              {postState &&
-                postState.map((post, index) => (
-                  <div key={index} className="relative mb-4">
+              {posts &&
+                posts.map((post, index) => (
+                  <div key={index} className="relative mb-4 ">
                     <Image
                       src={post?.imageUrl}
                       alt={`Image`}
                       width={420}
                       height={420}
-                      className="mr-4  mr-20 columns-3 "
+                      className="mr-4  mr-20  main_profile_post"
                     />
                     {post.reels ? (
                       <Image
-                        src={post.reels}
+                        src={post?.reels}
                         alt={`Image`}
                         width={20}
                         height={20}
-                        className="ml-4 mt-4 mr-4 absolute right-0 top-0 "
+                        className="mr-4  mt-5 mr-20 absolute top-0 right-0 main_profile_icon"
                       />
                     ) : null}
                   </div>
@@ -262,4 +257,36 @@ text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-m
       <div></div>
     </div>
   );
+}
+
+export async function getStaticPaths() {
+  const userDataPaths = profileData?.userData.map((user) => ({
+    params: { id: user.id.toString() },
+  }));
+
+  const postPaths = profilePostData?.profilePostData.map((post) => ({
+    params: { id: post.id.toString() },
+  }));
+
+  const paths = [...userDataPaths, ...postPaths];
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }: { params: Params }) {
+  const user = profileData.userData.find(
+    (user) => user.id.toString() === params.id.toString()
+  );
+
+  const userPost = profilePostData.profilePostData.find(
+    (user) => user.id.toString() === params.id.toString()
+  );
+
+  if (!user || !userPost) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return { props: { user, userPost } };
 }

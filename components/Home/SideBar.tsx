@@ -15,7 +15,7 @@ export default function SideBar() {
           </div>{" "}
         </div>
         <aside className="side_bar_width right-0 left_null  fixed top-20   h-screen transition-transform side_bar_hide">
-          <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+          <div className="h-full px-3 py-4 overflow-y-auto bg-white dark:bg-gray-800">
             <div className="flex items-center justify-between ">
               <section className="flex items-center mr-4">
                 <Image

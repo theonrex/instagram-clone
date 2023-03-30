@@ -88,6 +88,14 @@
 
     }
 
+    /* [id] */
+    .profile_post_section {
+        width: 100%;
+    }
+
+    .main_profile_post {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 430px) {
@@ -101,6 +109,12 @@
 
     .home_icon {
         width: 80%;
+    }
+
+    .main_profile_icon{
+        width: 10px;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
     }
 }
 
@@ -187,7 +201,7 @@
         width: 70%;
     }
 
-    .instagram_logo{
+    .instagram_logo {
         width: 20%;
     }
 }
