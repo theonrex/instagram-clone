@@ -12,7 +12,11 @@ export default function InstagramPost() {
         <div className=" border border-gray-100 mb-8" key={index}>
           <div className="flex items-center justify-between mt-2 mb-3 mt-6 mr-4 ml-4 ">
             <ul className="flex items-center">
-              <a href={`/profile/${post.id}`} className=" flex items-center">
+              <Link
+                href={`/profile/${post.id}`}
+                as={`/profile/${post.id}`}
+                className=" flex items-center"
+              >
                 <Image
                   key={post.id}
                   src={post.url}
@@ -23,7 +27,7 @@ export default function InstagramPost() {
                   loading="lazy"
                 />
                 <h4 className="font-semibold">{post.name}</h4>
-              </a>
+              </Link>
             </ul>
 
             <ul>
