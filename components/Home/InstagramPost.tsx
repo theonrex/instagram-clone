@@ -9,7 +9,7 @@ export default function InstagramPost() {
   return (
     <>
       {PostData?.userData.map((post, index) => (
-        <div className=" border border-gray-100 mb-8" key={index}>
+        <div className=" border border-gray-900 mb-8" key={index}>
           <div className="flex items-center justify-between mt-2 mb-3 mt-6 mr-4 ml-4 ">
             <ul className="flex items-center">
               <a
@@ -78,14 +78,14 @@ export default function InstagramPost() {
             <p className="text-stone-700 pt-1 pb-1">View all 100 comments</p>
             <p className="text-stone-700 pt-1 pb-1">1 hour ago</p>
           </article>
-          <section className="flex  justify-between  items-center bg-transparent-50 border border-transparent-300 ">
+          <section className="flex  justify-between  items-center bg-transparent-50 border border-transparent-900 ">
             <div className=" ">
               <div className="flex inset-y-0 left-0 flex items-center pl-3">
                 <Image src={EmojiIcon} alt="EmojiIcon" width={20} />
                 <input
                   type="text"
                   id="simple-search"
-                  className=" flex  border-transparent text-gray-900 text-sm rounded-lg focus:ring-transparent focus:border-transparent block w-full pl-10 p-2.5  dark:bg-transparent dark:transparent dark:placeholder-transparent dark:text-white dark:focus:ring-transparent dark:focus:border-transparent"
+                  className=" flex  border border-gray-00 text-gray-900 text-sm rounded-lg focus:ring-transparent focus:border-transparent block w-full pl-10 p-2.5  dark:bg-transparent dark:transparent dark:placeholder-transparent dark:text-white dark:focus:ring-transparent dark:focus:border-transparent"
                   placeholder="Add a comment"
                   required
                 />

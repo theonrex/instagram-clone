@@ -1,0 +1,85 @@
+.darkModeTheme {
+    background-color: black !important;
+}
+
+.darkModeTheme div,
+.darkModeTheme .nav_bg,
+.darkModeTheme div,
+.darkModeTheme ul,
+.darkModeTheme li {
+    background-color: black !important;
+}
+
+.darkModeTheme input {
+    background-color: rgb(0, 0, 0);
+    border: 2px solid white !important;
+}
+
+/* text dark mode */
+.darkModeTheme h1,
+.darkModeTheme h2,
+.darkModeTheme h3,
+.darkModeTheme h4,
+.darkModeTheme h5,
+.darkModeTheme h6,
+.darkModeTheme p,
+.darkModeTheme div,
+.darkModeTheme header,
+.darkModeTheme article,
+.darkModeTheme strong {
+    color: white;
+}
+
+/* button */
+.darkModeTheme .Edit_Profile_button {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+
+/* footer */
+.darkModeTheme footer {
+    background-color: black;
+}
+
+/* input */
+
+
+.darkModeTheme [type='email'],
+.darkModeTheme [type='url'],
+.darkModeTheme [type='password'],
+.darkModeTheme [type='number'],
+.darkModeTheme [type='date'],
+.darkModeTheme [type='datetime-local'],
+.darkModeTheme [type='month'],
+.darkModeTheme [type='search'],
+.darkModeTheme [type='tel'],
+.darkModeTheme [type='time'],
+.darkModeTheme [type='week'],
+.darkModeTheme [multiple],
+.darkModeTheme textarea,
+.darkModeTheme select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #b1b1b1a0 !important;
+    border-width: 1px !important;
+
+}
+
+.darkModeTheme [type='text'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #b1b1b100 !important;
+    border-width: 1px !important;
+
+}
+
+
+/* SVG */
+.darkModeTheme .darkMode_invert {
+    filter: invert(100%);
+}

@@ -2,15 +2,16 @@ import React from "react";
 import Image from "next/image";
 import userProfileData from "../../data/userProfileData.json";
 import Settings from "./settingsIcon";
+import Theme from "../Theme/theme";
 export default function UserProfile() {
   return (
     <div className="mt-4 container p-4 mx-auto">
       {userProfileData?.userProfileData.map((profileData, index) => (
-        <div>
+        <div key={index}>
           <section className="flex justify-end items-center mb-2 Edit_Profile">
             <button
               type="button"
-              className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-0.5 text-center mr-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+              className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm pt-3 pb-3 pr-7 pl-7 text-center mr-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800   Edit_Profile_button"
             >
               Edit Profile
             </button>
@@ -40,7 +41,7 @@ export default function UserProfile() {
                         className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                       >
                         <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                          <div>" user.name "</div>
+                          <div> {profileData.name}</div>
                         </div>
                         <ul
                           className="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -57,9 +58,9 @@ export default function UserProfile() {
                           <li>
                             <a
                               href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
-                              Settings
+                              <Theme />
                             </a>
                           </li>
                         </ul>

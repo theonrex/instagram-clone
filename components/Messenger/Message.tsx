@@ -38,7 +38,7 @@ export default function Message() {
                       alt={`Image`}
                       width={20}
                       height={20}
-                      className="pt-1 "
+                      className="pt-1 darkMode_invert"
                     />
                   </span>
                 </aside>
@@ -47,9 +47,9 @@ export default function Message() {
                 <Image
                   src={MessageIcon}
                   alt={`Image`}
-                  width={30}
-                  height={30}
-                  className="me"
+                  width={20}
+                  height={20}
+                  className="me darkMode_invert"
                 />
               </span>
             </div>
@@ -67,7 +67,7 @@ export default function Message() {
               alt={`Image`}
               width={50}
               height={50}
-              className="ml-22 rounded-full "
+              className="ml-22 rounded-full darkMode_invert"
             />
             <h1 className="text-center font-semibold mb-3">Your Message</h1>
 

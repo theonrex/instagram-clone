@@ -24,7 +24,7 @@ export default function Suggestions() {
                 className="rounded-full  flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
               />
 
-              <h2 className="flex-1 ml-3 whitespace-nowrap">
+              <h2 className="flex-1 ml-3 whitespace-nowrap hover:text-gray-900">
                 Kanban
                 <br />
                 <span className="text-xs text-gray-500">

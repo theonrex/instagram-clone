@@ -11,14 +11,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-#cta-button-sidebar {
-    background-color: red !important;
-}
-
-#redddd {
-    background-color: red !important;
-
-}
 
 nav {
     padding-bottom: 3em !important;

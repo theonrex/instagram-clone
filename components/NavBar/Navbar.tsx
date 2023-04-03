@@ -9,17 +9,18 @@ import ProflieIcon from "../../public/assets/ProfileImage.png";
 import InstagramLogo from "../../public/assets/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import Theme from "../Theme/theme";
 
 export default function Navbar() {
   return (
     <nav>
       {" "}
-      <div className="nav_bg bg-white-50 fixed z-[100] top-0 left-0 right-0 flex flex-wrap items-center justify-between mx-auto">
+      <div className="nav_bg bg-white-50 mb-6 fixed z-[100] top-0 left-0 right-0 flex flex-wrap items-center justify-between mx-auto">
         <Link href="/" className="flex items-center">
           <Image
             src={InstagramLogo}
             alt="Instagram Logo "
-            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm pl-1 py-2.5 text-center mr-1 md:mr-0  sm:w-5/5 instagram_logo"
+            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm pl-1 py-2.5 text-center mr-1 md:mr-0  sm:w-5/5 instagram_logo darkMode_invert"
             height={30}
           />
         </Link>
@@ -40,7 +41,7 @@ export default function Navbar() {
             <Image
               src={HomeIcon}
               alt="home icon"
-              className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide"
+              className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide darkMode_invert"
               height={70}
               width={65}
             />
@@ -49,7 +50,7 @@ export default function Navbar() {
             <Image
               src={MessageIcon}
               alt="homeMessage Icon"
-              className="text-white   focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide"
+              className="text-white   focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide darkMode_invert"
               height={70}
               width={65}
             />
@@ -58,7 +59,7 @@ export default function Navbar() {
             <Image
               src={PostIcon}
               alt="post icon"
-              className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide"
+              className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide darkMode_invert"
               height={70}
               width={65}
             />
@@ -69,7 +70,7 @@ export default function Navbar() {
           <Image
             src={GpsIcon}
             alt="gps icon"
-            className="text-white   focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide"
+            className="text-white   focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide darkMode_invert"
             height={70}
             width={65}
           />
@@ -78,7 +79,7 @@ export default function Navbar() {
           <Image
             src={FavoriteIcon}
             alt="favorite icon"
-            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide"
+            className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  nav_hide darkMode_invert"
             height={40}
             width={65}
           />
@@ -91,6 +92,7 @@ export default function Navbar() {
               width={60}
             />
           </a>
+          <Theme/>
         </div>
       </div>
     </nav>

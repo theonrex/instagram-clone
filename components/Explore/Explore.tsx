@@ -24,7 +24,7 @@ export default function Explore() {
         <div className="item1 relative">
           <Link
             href="#"
-            className=" flex relative  items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            className=" flex relative  items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-10 dark:hover:bg-gray-00"
           >
             <Image
               key={getFirstData.id}
@@ -46,7 +46,7 @@ export default function Explore() {
         <div className="">
           <Link
             href="#"
-            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:pb-1"
           >
             <Image
               key={getsecondData.id}
@@ -68,7 +68,7 @@ export default function Explore() {
         <div className="">
           <Link
             href="#"
-            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:pb-1"
           >
             <Image
               key={getThirdData.id}
@@ -90,7 +90,7 @@ export default function Explore() {
         <div className="">
           <Link
             href="#"
-            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:pb-1"
           >
             <Image
               key={getForthData.id}
@@ -112,7 +112,7 @@ export default function Explore() {
         <div className="">
           <Link
             href="#"
-            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:pb-1"
           >
             <Image
               key={getFirstData.id}
@@ -134,7 +134,7 @@ export default function Explore() {
         <div className="">
           <Link
             href="#"
-            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            className=" flex relative items-center p-2 text-gray-900 rounded-lg dark:text-white hover:pb-1"
           >
             <Image
               key={getFifthData.id}
@@ -156,7 +156,7 @@ export default function Explore() {
         <div className="">
           <Link
             href="#"
-            className=" relative flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+            className=" relative flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:pb-1"
           >
             <Image
               key={getSixthData.id}

@@ -17,7 +17,7 @@ export default function UserProfileTab() {
           >
             <li className="mr-2" role="presentation">
               <button
-                className="inline-block flex justify-center items-center mr-5 p-4 border-b-2 rounded-t-lg"
+                className="inline-block flex justify-center items-center mr-5 p-4 rounded-t-lg"
                 id="profile-tab"
                 data-tabs-target="#profile"
                 type="button"
@@ -29,14 +29,14 @@ export default function UserProfileTab() {
                   src={PostIcon}
                   alt="PostIcon"
                   width={15}
-                  className="mr-3"
+                  className="mr-3 darkMode_invert"
                 />
                 <span>Profile</span>
               </button>
             </li>
             <li className="mr-2" role="presentation">
               <button
-                className="inline-block flex justify-center items-center mr-5 p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                className="inline-block flex justify-center items-center mr-5 p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 id="saved-tab"
                 data-tabs-target="#saved"
                 type="button"
@@ -45,17 +45,17 @@ export default function UserProfileTab() {
                 aria-selected="false"
               >
                 <Image
-                  src={PostIcon}
+                  src={SavetIcon}
                   alt="PostIcon"
                   width={15}
-                  className="mr-3"
+                  className="mr-3 darkMode_invert"
                 />
                 Saved
               </button>
             </li>
             <li className="mr-2" role="presentation">
               <button
-                className="inline-block flex justify-center items-center mr-5 p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                className="inline-block flex justify-center items-center mr-5 p-4 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 id="tagged-tab"
                 data-tabs-target="#tagged"
                 type="button"
@@ -64,10 +64,10 @@ export default function UserProfileTab() {
                 aria-selected="false"
               >
                 <Image
-                  src={PostIcon}
+                  src={TagIcon}
                   alt="PostIcon"
                   width={15}
-                  className="mr-3"
+                  className="mr-3 darkMode_invert"
                 />
                 <span>Tagged</span>
               </button>
@@ -90,11 +90,9 @@ export default function UserProfileTab() {
             aria-labelledby="saved-tab"
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
-       
               <strong className="font-medium text-gray-800 dark:text-white">
-               No Saved Post
+                No Saved Post
               </strong>
-            
             </p>
           </div>
           <div
@@ -104,11 +102,9 @@ export default function UserProfileTab() {
             aria-labelledby="tagged-tab"
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
-       
               <strong className="font-medium text-gray-800 dark:text-white">
-              Not Yet Tagged
+                Not Yet Tagged
               </strong>
-          
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function Settings() {
         src={SettingsIcon}
         alt="SettingsIcon"
         width={20}
-        className="mr-4 rounded-full mr-20"
+        className="mr-4 rounded-full mr-20 SettingsIcon darkMode_invert"
       />
     </div>
   );
