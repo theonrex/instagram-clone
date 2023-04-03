@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import userProfileData from "../../data/userProfileData.json";
 import Settings from "./settingsIcon";
-import Theme from "../Theme/theme";
+
 export default function UserProfile() {
   return (
     <div className="mt-4 container p-4 mx-auto">
@@ -55,14 +55,7 @@ export default function UserProfile() {
                               Dashboard
                             </a>
                           </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              <Theme />
-                            </a>
-                          </li>
+                       
                         </ul>
                       </div>
                     </div>
