@@ -21,7 +21,7 @@ export default function BottomNav() {
             className="inline-flex flex-col items-center justify-center px-2 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
             <Link href="/">
-              <Image src={HomeIcon} alt="HomeIcon" width={20} />
+              <Image src={HomeIcon} alt="HomeIcon" width={20} className="darkMode_invert"/>
             </Link>
             <span className="sr-only">Home</span>
           </button>
@@ -42,7 +42,7 @@ export default function BottomNav() {
             className="inline-flex flex-col items-center justify-center px-2 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
             <Link href="/messenger">
-              <Image src={MessageIcon} alt="HomeIcon" width={20} />
+              <Image src={MessageIcon} alt="HomeIcon" width={20} className="darkMode_invert"/>
             </Link>
             <span className="sr-only">Message </span>
           </button>
@@ -62,7 +62,7 @@ export default function BottomNav() {
             className="inline-flex flex-col items-center justify-center px-2 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
             <Link href="/">
-              <Image src={PostIcon} alt="HomeIcon" width={20} />
+              <Image src={PostIcon} alt="HomeIcon" width={20} className="darkMode_invert" />
             </Link>
             <span className="sr-only">Post</span>
           </button>
@@ -83,7 +83,7 @@ export default function BottomNav() {
             className="inline-flex flex-col items-center justify-center px-2 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
             <Link href="/explore">
-              <Image src={exploreIcon} alt="HomeIcon" width={20} />
+              <Image src={exploreIcon} alt="HomeIcon" width={20} className="darkMode_invert"/>
             </Link>
             <span className="sr-only">Explore</span>
           </button>
@@ -104,7 +104,7 @@ export default function BottomNav() {
             className="inline-flex flex-col items-center justify-center px-2 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
             <Link href="/">
-              <Image src={FavoriteIcon} alt="HomeIcon" width={20} />
+              <Image src={FavoriteIcon} alt="HomeIcon" width={20} className="darkMode_invert"/>
             </Link>
             <span className="sr-only">favorite</span>
           </button>
@@ -127,15 +127,15 @@ export default function BottomNav() {
             className="inline-flex flex-col items-center justify-center px-2 hover:bg-gray-50 dark:hover:bg-gray-800 group"
           >
             <Link href="/">
-              <Image src={SearchIcon} alt="HomeIcon" width={20} />
+              <Image src={SearchIcon} alt="HomeIcon" width={20} className="darkMode_invert"/>
             </Link>
             <span className="sr-only">search</span>
           </button>
-
+ 
           <div
             id="tooltip-search"
             role="tooltip"
-            className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 "
           >
             Search
             <div className="tooltip-arrow" data-popper-arrow />
